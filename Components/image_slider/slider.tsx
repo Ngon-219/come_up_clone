@@ -38,7 +38,7 @@ const Slider = (slides:any) => {
         <Image src={next_icon} alt="" className='h-8 w-8' onClick={clickNext}/>
       </div>
       <div>
-        {slides.map((elem:any, index:any) => (
+        {Array.from(slides).map((elem:any, index:any) => (
           <div
           key={index}
           className={
@@ -52,7 +52,7 @@ const Slider = (slides:any) => {
       </div>
       <div className='absolute flex justify-center w-full bottom-1 flex-row'>
         <div className='border-none rounded-md pt-0 pb-0 pr-3 pl-3 text-center'>
-          {slides.map((elem:any, index:any) => (
+          {Array.from(slides).map((elem:any, index:number) => (
               <p className= {
                 `${
                   index === activeImage ? " inline-block text-3xl text-slate-100" : " inline-block text-3xl text-slate-500"

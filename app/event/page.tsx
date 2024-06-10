@@ -110,7 +110,7 @@ const Event = () => {
 
         <div className=' grid grid-cols-1 laptop:grid-cols-3 gap-4 m-4'>
             {
-                records.map((item, index) => {
+                records.map((item:any, index:any) => {
                     return (
                         <Link href={`/event/${item.code}`} key={index}><Item image={item}/></Link>
                         // <div className='block border-2'>
@@ -129,7 +129,7 @@ const Event = () => {
                 </div>
                 <div className='flex flex-row'>
                 {
-                    numberPage.map((item, index) => {
+                    numberPage.map((item:any, index:any) => {
                         return(
                             <div key={index} onClick={() => {
                                 focusToPage(item)
