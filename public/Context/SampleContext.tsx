@@ -30,7 +30,7 @@ const sampleData = [
 // Tạo context
 export const SampleContext = createContext(sampleData);
 
-const SampleProvider = ({children}) => {
+const SampleProvider = (children:any) => {
   
     return (
       <SampleContext.Provider value={sampleData}>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const VenueComponent = ({image}) => {
+const VenueComponent = (image:any) => {
   return (
     <div className='p-2 border-none shadow-md m-2 w-full rounded-md'>
         <div className='mb-8'>

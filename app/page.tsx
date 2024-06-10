@@ -35,11 +35,35 @@ export default function Home() {
 
   const tg = () => {
     document.getElementById("event")?.scrollIntoView(true)
-    setEventSeeMore(6)
+    return 6;
     
   }
+
+  const hostNum = () => {
+    return image.length > 6 ? (
+      (host_see_more >= image.length) ? (6) : (host_see_more + 3)
+    ): (
+      6
+    )
+  }
+
+  const eventNum = () => {
+    return venueImage.length > 6 ? (
+      (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
+    ): (
+        6
+    )
+  }
+
+  const venueNum = () => {
+    return image.length > 6 ? (
+      (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
+    ): (
+      6
+    )
+  }
   
-  const image = [
+  const image:any = [
     {name: "https://i.ytimg.com/vi/5iAIVtPHMmw/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGGUgVChIMA8=&rs=AOn4CLDQDKmWi3fNakpjL7RLdobRGuiRZg", description: "first"},
     {name: "https://uiuiui.in/uploads/posts/2022-11/1661380704-968023e42199504c2f0c07c7f34a092f.webp", description: "second"},
     {name: "https://wallpapercave.com/wp/wp9748820.jpg", description: "second"},
@@ -112,13 +136,7 @@ export default function Home() {
                 <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setEventSeeMore(() => {
-                        return venueImage.length > 6 ? (
-                          (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
-                        ): (
-                            setEventSeeMore(6)
-                        )
-                      })
+                      setEventSeeMore(eventNum())
                     }}>
                       {venueImage.length > 6 ? (
                       (event_see_more >= venueImage.length) ? "See less" : "See more"
@@ -151,7 +169,7 @@ export default function Home() {
               <div>
                 <div className=' grid grid-cols-2 laptop:grid-cols-3 gap-2'>
                   {
-                    image.map((item, index) => {
+                    image.map((item:any, index:any) => {
                       return index < venue_see_more ? (
                         <VenueComponent image={item}/>
                       ) : (
@@ -163,13 +181,7 @@ export default function Home() {
                 <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setVenueSeeMore(() => {
-                        return image.length > 6 ? (
-                          (venue_see_more >= image.length) ? (setVenueSeeMore(6)) : (venue_see_more + 3)
-                        ): (
-                          setVenueSeeMore(6)
-                        )
-                      })
+                      setVenueSeeMore(venueNum())
                     }}>
                       {image.length > 6 ? (
                       (venue_see_more >= image.length) ? "See less" : "See more"
@@ -201,9 +213,9 @@ export default function Home() {
               </div>
               <div className=' grid grid-cols-2 laptop:grid-cols-3 gap-2 w-full m-2'>
                 {
-                  image.map((item, index) => {
+                  image.map((item:any, index:any) => {
                     return index < host_see_more ? (
-                      <HostComponent />
+                      <HostComponent image={image} />
                     ) : (
                       <div></div>
                     )
@@ -214,13 +226,7 @@ export default function Home() {
               <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setHostSeeMore(() => {
-                        return image.length > 6 ? (
-                          (host_see_more >= image.length) ? (setHostSeeMore(6)) : (host_see_more + 3)
-                        ): (
-                          setHostSeeMore(6)
-                        )
-                      })
+                      setHostSeeMore(hostNum)
                     }}>
                       {image.length > 6 ? (
                       (host_see_more >= image.length) ? "See less" : "See more"

@@ -6,7 +6,7 @@ import next_icon from './Images/next_icon.png'
 import prev_icon from './Images/prev_icon.png'
 import Image from 'next/image';
 
-const Slider = ({slides}) => {
+const Slider = (slides:any) => {
   const [activeImage, setActiveImage] = useState(0);
 
   const clickNext = () => {
@@ -38,9 +38,9 @@ const Slider = ({slides}) => {
         <Image src={next_icon} alt="" className='h-8 w-8' onClick={clickNext}/>
       </div>
       <div>
-        {slides.map((elem, index) => (
+        {slides.map((elem:any, index:any) => (
           <div
-          // key={index}
+          key={index}
           className={
             `${
               index === activeImage ? "block w-full h-40vh laptop:h-50vh object-cover transition-all duration-500 ease-in-out" : "hidden"
@@ -52,12 +52,12 @@ const Slider = ({slides}) => {
       </div>
       <div className='absolute flex justify-center w-full bottom-1 flex-row'>
         <div className='border-none rounded-md pt-0 pb-0 pr-3 pl-3 text-center'>
-          {slides.map((elem, index) => (
+          {slides.map((elem:any, index:any) => (
               <p className= {
                 `${
                   index === activeImage ? " inline-block text-3xl text-slate-100" : " inline-block text-3xl text-slate-500"
                 }`
-              }>•</p>
+              } key={index}>•</p>
           ))}
         </div>
       </div>
