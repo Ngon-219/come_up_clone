@@ -14,32 +14,35 @@ function NavBar() {
     <main>
       <div>
       <nav className="flex flex-row bg-nav-bar w-full text-center items-center">
-        <div className='inline-block hover:cursor-pointer'>
+        <div className='inline-block hover:cursor-pointer' >
             <a href="/"><Image src={navLogo} alt="" width={200}/></a>
         </div>
         <div className='laptop:flex flex-row hidden'>
-          <div className='pl-8 text-white font-medium '>
-            EVENT
+          <div className='pl-8 text-white font-medium hover:cursor-pointer'>
+            <a href="/event">EVENT</a>
           </div>
-          <div className='pl-8 text-white font-medium '>
-            VENUE
+          <div className='pl-8 text-white font-medium hover:cursor-pointer'>
+            <a href="/venue">VENUE</a>
           </div>
-          <div className='pl-8 text-white font-medium '>
-            HOST
+          <div className='pl-8 text-white font-medium hover:cursor-pointer' >
+            <a href="/host">HOST</a>
           </div>
-          <div className='pl-8 text-white font-medium '>
-            LIKED
+          <div className='pl-8 text-white font-medium hover:cursor-pointer'>
+            <a href="/liked">LIKED</a>
           </div>
-          <div className='pl-8 text-white font-medium '>
-            MY TICKET
+          <div className='pl-8 text-white font-medium hover:cursor-pointer'>
+            <a href="/my-ticket">MY TICKET</a>
           </div>
         </div>
 
         <div className='absolute right-5 flex flex-row items-center'>
           <div className=' laptop:block hidden rounded-full border-2 border-white p-10px pl-10 pr-10 pt-0 pb-0 hover:cursor-pointer'>
-            <div className='text-white font-medium flex flex-row items-center'>
-                <Image src={host_btn} alt=""/>
-                <p className='pl-2 font-extrabold'>BECOME A HOST!</p>
+            <div className='text-white font-medium flex flex-row items-center hover:cursor-pointer'>
+              <a href="/host" className='flex flex-row items-center'>
+              <Image src={host_btn} alt=""/>
+              <p className='pl-2 font-extrabold'>BECOME A HOST!</p>
+              </a>
+                
             </div>
         </div>
         <div className='p-4 laptop:p-8'>

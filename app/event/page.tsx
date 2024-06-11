@@ -70,7 +70,7 @@ const Event = () => {
         <NavBar />
         <Slider slides={image}/>
         <div className=' grid grid-cols-2 laptop:grid-cols-5 m-4'>
-            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {setOpen(true)}}>
+            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2 hover:cursor-pointer' onClick={() => {setOpen(true)}}>
                 <a href="/event"><Image src={cities_icon} alt="" width={40}/></a>
                 <div className='flex justify-center w-full'>
                     <p className='font-bold'>Select cities </p>
@@ -80,7 +80,7 @@ const Event = () => {
                     <Image src={dropdown_menu} alt="" width={20}/>
                 </div>
             </div>
-            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {setOpen(true)}}>
+            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2 hover:cursor-pointer' onClick={() => {setOpen(true)}}>
                 <a href="/event"><Image src={calender_icon} alt="" width={40}/></a>
                 <div className='flex justify-center w-full'>
                     <p className='font-bold'>All Time</p>
@@ -90,7 +90,7 @@ const Event = () => {
                     <Image src={dropdown_menu} alt="" width={20}/>
                 </div>
             </div>
-            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2 col-span-2 laptop:col-span-1 laptop:m-0 mt-2' onClick={() => {setOpen(true)}}>
+            <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2 hover:cursor-pointer col-span-2 laptop:col-span-1 laptop:m-0 mt-2' onClick={() => {setOpen(true)}}>
                 <a href="/event"><Image src={category_icon} alt="" width={40}/></a>
                 <div className='flex justify-center w-full'>
                     <p className='font-bold'>All Category</p>
@@ -135,7 +135,7 @@ const Event = () => {
                         return(
                             <div key={index} onClick={() => {
                                 focusToPage(item)
-                            }} className={`m-2 ${currentPage==item ? (' underline'): ('rounded-full')}`}><p>{item}</p></div>
+                            }} className={`m-2 ${currentPage==item ? (' underline'): ('rounded-full')} hover:cursor-pointer`}><p>{item}</p></div>
                         )
                     })
                 }

@@ -70,7 +70,7 @@ export default function Home() {
           </div>
         </div>
         <div className=' grid grid-cols-3 gap-3'>
-          <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {
+          <div className='hover:cursor-pointer shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {
             return window.location.href = "/event"
           }}>
             <a href="/event"><Image src={event_icon} alt="" width={40}/></a>
@@ -78,13 +78,13 @@ export default function Home() {
               <p>EVENT</p>
             </div>
           </div>
-          <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2'>
+          <div className='hover:cursor-pointer shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {window.location.href = '/venue'}}>
             <Image src={venue_icon} alt="" width={40}/>
             <div className='laptop:flex laptop:justify-center laptop:w-full hidden'>
               <p>VENUE</p>
             </div>
           </div>
-          <div className='shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2'>
+          <div className='hover:cursor-pointer shadow-lg flex flex-row laptop:justify-start justify-center items-center border-2 rounded-lg p-2' onClick={() => {window.location.href='host'}}>
             <Image src={host_icon} alt="" width={40}/>
             <div className='laptop:flex laptop:justify-center laptop:w-full hidden'>
               <p>HOST</p>
