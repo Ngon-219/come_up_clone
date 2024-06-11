@@ -59,7 +59,7 @@ const Slider:React.FC<SlidesComponentProps> = ({slides}) => {
                 `${
                   index === activeImage ? " inline-block text-3xl text-slate-100" : " inline-block text-3xl text-slate-500"
                 }`
-              } key={index}>•</p>
+              }>•</p>
           ))}
         </div>
       </div>
