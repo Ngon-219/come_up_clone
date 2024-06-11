@@ -1,10 +1,10 @@
 "use client"
 
 import React from 'react'
-import NavBar from '@/Components/Navbar/navBar'
-import Footer from '@/Components/Footer/page'
-import Item from '@/Components/Item/page'
-import Slider from '@/Components/image_slider/slider'
+import NavBar from '@/public/Components/Navbar/navBar'
+import Footer from '@/public/Components/Footer/page'
+import Item from '@/public/Components/Item/page'
+import Slider from '@/public/Components/image_slider/slider'
 import { useContext } from 'react'
 import SampleContext from '@/public/Context/SampleContext'
 import { usePathname } from 'next/navigation'

@@ -1,7 +1,7 @@
 import React from 'react'
 import page from './user/page'
-import NavBar from '@/Components/Navbar/navBar'
-import Footer from '@/Components/Footer/page'
+import NavBar from '@/public/Components/Navbar/navBar'
+import Footer from '@/public/Components/Footer/page'
 import Link from 'next/link'
 
 const NotFound = () => {
