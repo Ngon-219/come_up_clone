@@ -35,32 +35,8 @@ export default function Home() {
 
   const tg = () => {
     document.getElementById("event")?.scrollIntoView(true)
+    setEventSeeMore(6)
     return 6;
-    
-  }
-
-  const hostNum = () => {
-    return image.length > 6 ? (
-      (host_see_more >= image.length) ? (6) : (host_see_more + 3)
-    ): (
-      6
-    )
-  }
-
-  const eventNum = () => {
-    return venueImage.length > 6 ? (
-      (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
-    ): (
-        6
-    )
-  }
-
-  const venueNum = () => {
-    return image.length > 6 ? (
-      (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
-    ): (
-      6
-    )
   }
   
   const image:any = [
@@ -125,7 +101,7 @@ export default function Home() {
                 <div className={`grid grid-cols-2 laptop:grid-cols-3 gap-0 w-full`}>
                   {venueImage.map((item, index) => {
                     return (index < event_see_more) ?(
-                      <div className='flex justify-center hover:cursor-pointer' onClick={() => { window.location.href = `event/${item.code}`}}>
+                      <div key={index} className='flex justify-center hover:cursor-pointer' onClick={() => { window.location.href = `event/${item.code}`}}>
                           <Item image={item}/>
                       </div>
                     ) : (
@@ -136,7 +112,13 @@ export default function Home() {
                 <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setEventSeeMore(eventNum())
+                      setEventSeeMore(() => {
+                        return venueImage.length > 6 ? (
+                          (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
+                        ): (
+                            6
+                        )
+                      })
                     }}>
                       {venueImage.length > 6 ? (
                       (event_see_more >= venueImage.length) ? "See less" : "See more"
@@ -171,7 +153,9 @@ export default function Home() {
                   {
                     image.map((item:any, index:any) => {
                       return index < venue_see_more ? (
-                        <VenueComponent image={item}/>
+                        <div key={index}>
+                          <VenueComponent image={item}/>
+                        </div>
                       ) : (
                         <div></div>
                       )
@@ -181,7 +165,13 @@ export default function Home() {
                 <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setVenueSeeMore(venueNum())
+                      setVenueSeeMore(() => {
+                        return image.length > 6 ? (
+                          (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
+                        ): (
+                          6
+                        )
+                      })
                     }}>
                       {image.length > 6 ? (
                       (venue_see_more >= image.length) ? "See less" : "See more"
@@ -215,7 +205,9 @@ export default function Home() {
                 {
                   image.map((item:any, index:any) => {
                     return index < host_see_more ? (
-                      <HostComponent image={image} />
+                      <div key={index}>
+                        <HostComponent />
+                      </div>
                     ) : (
                       <div></div>
                     )
@@ -226,7 +218,13 @@ export default function Home() {
               <div className='w-full flex justify-center'>
                   <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
                     <button onClick={() => {
-                      setHostSeeMore(hostNum)
+                      setHostSeeMore(() => {
+                        return image.length > 6 ? (
+                          (host_see_more >= image.length) ? (6) : (host_see_more + 3)
+                        ): (
+                          6
+                        )
+                      })
                     }}>
                       {image.length > 6 ? (
                       (host_see_more >= image.length) ? "See less" : "See more"

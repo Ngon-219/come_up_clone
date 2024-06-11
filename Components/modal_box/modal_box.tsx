@@ -1,9 +1,9 @@
 import X_icon from './images/x_icon.png'
 import Image from 'next/image'
 import dropdown_icon from './images/dropdown_icon.png'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
-export default function Modal( open:any, onClose:any) {
+const Modal:React.FC<any> = ({ open, onClose}) => {
 
   const diableScroll = () => {
     document.body.style.overflow = 'hidden'
@@ -76,3 +76,5 @@ export default function Modal( open:any, onClose:any) {
     </div>
   )
 }
+
+export default Modal

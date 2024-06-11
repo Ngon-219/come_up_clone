@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Item = (image:any) => {
+const Item:React.FC<any> = ({image}) => {
   return (
     <div className='w-full m-2 border-none shadow-md rounded-md bg-slate-100 items-center flex flex-col justify-center'>
         <div className='w-full m-2'>

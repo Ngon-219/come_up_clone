@@ -30,7 +30,7 @@ const sampleData = [
 // Tạo context
 export const SampleContext = createContext(sampleData);
 
-const SampleProvider = (children:any) => {
+const SampleProvider:React.FC<any> = ({children}) => {
   
     return (
       <SampleContext.Provider value={sampleData}>

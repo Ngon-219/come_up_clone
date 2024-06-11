@@ -58,7 +58,7 @@ const Event = () => {
         globalThis. scrollTo({ top: 0, left: 0, behavior: "smooth" })
     }
 
-    const focusToPage = (page:any) => {
+    const focusToPage = (page:number) => {
         setCurrentPage(page)
         globalThis. scrollTo({ top: 0, left: 0, behavior: "smooth" })
     }
@@ -110,9 +110,11 @@ const Event = () => {
 
         <div className=' grid grid-cols-1 laptop:grid-cols-3 gap-4 m-4'>
             {
-                records.map((item:any, index:any) => {
+                records.map((item, index) => {
                     return (
-                        <Link href={`/event/${item.code}`} key={index}><Item image={item}/></Link>
+                        <div key={index}>
+                            <Link href={`/event/${item.code}`}><Item image={item}/></Link>
+                        </div>
                         // <div className='block border-2'>
                             
                         //     <a href={`/${index}`}></a>
@@ -129,7 +131,7 @@ const Event = () => {
                 </div>
                 <div className='flex flex-row'>
                 {
-                    numberPage.map((item:any, index:any) => {
+                    numberPage.map((item, index) => {
                         return(
                             <div key={index} onClick={() => {
                                 focusToPage(item)
