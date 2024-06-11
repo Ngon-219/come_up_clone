@@ -19,7 +19,7 @@ import heart from '../image/heart.png'
 import share from '../image/share.png'
 import NotFound from '@/app/not-found'
 
-const eventDetail = ({params} : {
+const EventDetail = ({params} : {
     params: {eventId: string}
 }) => {
   const pathname = usePathname()
@@ -89,9 +89,9 @@ const eventDetail = ({params} : {
           </div>
           <div className='border-none ml-2 mt-2 laptop:col-span-2 col-span-3 flex flex-row overflow-x-auto  no-scrollbar shadow-md'>
               {
-                image.map(() => {
+                image.map((item, index) => {
                   return (
-                    <div>
+                    <div key={index}>
                       <div className='w-14 h-14 bg-gray-400 rounded-full m-2'></div>
                     </div>
                   )
@@ -135,9 +135,9 @@ const eventDetail = ({params} : {
             <h1 className='font-bold text-2xl ml-2'>Instagram</h1>
             <div className='border-none ml-2 mt-2 col-span-2 flex flex-row overflow-x-auto  no-scrollbar'>
                 {
-                  image.map(() => {
+                  image.map((item, index) => {
                     return (
-                      <div>
+                      <div key={index}>
                         <div className='w-36 h-44 bg-gray-400 m-2 rounded-md'></div>
                       </div>
                     )
@@ -224,4 +224,4 @@ const eventDetail = ({params} : {
   )
 }
 
-export default eventDetail
+export default EventDetail

@@ -18,8 +18,7 @@ import Link from 'next/link'
 import SampleContext from '@/public/Context/SampleContext'
 
 
-const Event = ( context) => {
-    console.log({context})
+const Event = () => {
     const image = useContext(SampleContext)
     if(!image) {
         alert('ahihi')
@@ -59,7 +58,7 @@ const Event = ( context) => {
         globalThis. scrollTo({ top: 0, left: 0, behavior: "smooth" })
     }
 
-    const focusToPage = (page) => {
+    const focusToPage = (page:number) => {
         setCurrentPage(page)
         globalThis. scrollTo({ top: 0, left: 0, behavior: "smooth" })
     }
@@ -111,9 +110,11 @@ const Event = ( context) => {
 
         <div className=' grid grid-cols-1 laptop:grid-cols-3 gap-4 m-4'>
             {
-                records.map((item) => {
+                records.map((item, index) => {
                     return (
-                        <Link href={`/event/${item.code}`}><Item image={item}/></Link>
+                        <div key={index}>
+                            <Link href={`/event/${item.code}`}><Item image={item}/></Link>
+                        </div>
                         // <div className='block border-2'>
                             
                         //     <a href={`/${index}`}></a>
@@ -130,9 +131,9 @@ const Event = ( context) => {
                 </div>
                 <div className='flex flex-row'>
                 {
-                    numberPage.map((item) => {
+                    numberPage.map((item, index) => {
                         return(
-                            <div onClick={() => {
+                            <div key={index} onClick={() => {
                                 focusToPage(item)
                             }} className={`m-2 ${currentPage==item ? (' underline'): ('rounded-full')}`}><p>{item}</p></div>
                         )

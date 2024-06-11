@@ -8,7 +8,6 @@ import account_icon from './image/account_icon.png'
 import notification_icon from './image/notification_icon.png'
 import press_down_icon from './image/press_down_icon.png'
 import host_btn from './image/host_button.png'
-import create_event_btn from '@/public/images/'
 
 function NavBar() {
   return (

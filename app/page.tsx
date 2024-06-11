@@ -36,7 +36,7 @@ export default function Home() {
   const tg = () => {
     document.getElementById("event")?.scrollIntoView(true)
     setEventSeeMore(6)
-    
+    return 6;
   }
   
   const image = [
@@ -101,7 +101,7 @@ export default function Home() {
                 <div className={`grid grid-cols-2 laptop:grid-cols-3 gap-0 w-full`}>
                   {venueImage.map((item, index) => {
                     return (index < event_see_more) ?(
-                      <div className='flex justify-center hover:cursor-pointer' onClick={() => { window.location.href = `event/${item.code}`}}>
+                      <div key={index} className='flex justify-center hover:cursor-pointer' onClick={() => { window.location.href = `event/${item.code}`}}>
                           <Item image={item}/>
                       </div>
                     ) : (
@@ -116,7 +116,7 @@ export default function Home() {
                         return venueImage.length > 6 ? (
                           (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
                         ): (
-                            setEventSeeMore(6)
+                            6
                         )
                       })
                     }}>
@@ -153,7 +153,9 @@ export default function Home() {
                   {
                     image.map((item, index) => {
                       return index < venue_see_more ? (
-                        <VenueComponent image={item}/>
+                        <div key={index}>
+                          <VenueComponent image={item}/>
+                        </div>
                       ) : (
                         <div></div>
                       )
@@ -165,9 +167,9 @@ export default function Home() {
                     <button onClick={() => {
                       setVenueSeeMore(() => {
                         return image.length > 6 ? (
-                          (venue_see_more >= image.length) ? (setVenueSeeMore(6)) : (venue_see_more + 3)
+                          (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
                         ): (
-                          setVenueSeeMore(6)
+                          6
                         )
                       })
                     }}>
@@ -203,7 +205,9 @@ export default function Home() {
                 {
                   image.map((item, index) => {
                     return index < host_see_more ? (
-                      <HostComponent />
+                      <div key={index}>
+                        <HostComponent />
+                      </div>
                     ) : (
                       <div></div>
                     )
@@ -216,9 +220,9 @@ export default function Home() {
                     <button onClick={() => {
                       setHostSeeMore(() => {
                         return image.length > 6 ? (
-                          (host_see_more >= image.length) ? (setHostSeeMore(6)) : (host_see_more + 3)
+                          (host_see_more >= image.length) ? (6) : (host_see_more + 3)
                         ): (
-                          setHostSeeMore(6)
+                          6
                         )
                       })
                     }}>

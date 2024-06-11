@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const HostComponent = ({image}) => {
+const HostComponent = ({image=null}) => {
   return (
     <div className=' flex flex-row m-3'>
         <div className=' rounded-full m-2'>
