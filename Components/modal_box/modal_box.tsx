@@ -3,8 +3,8 @@ import Image from 'next/image'
 import dropdown_icon from './images/dropdown_icon.png'
 import React, { useEffect } from 'react'
 
-const Modal:React.FC<any> = ({ open, onClose}) => {
-
+const Modal:React.FC<any> = ({ open=false, onClose}) => {
+  // open = true
   const diableScroll = () => {
     document.body.style.overflow = 'hidden'
   }
