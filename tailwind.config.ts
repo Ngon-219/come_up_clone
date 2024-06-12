@@ -25,7 +25,8 @@ const config: Config = {
         '40vh': '40vh',
         '45vh': '45vh',
         '80vh': '80vh',
-        '20vh': '20vh'
+        '20vh': '20vh',
+        '42vh': '42vh',
       },
       screens: {
         // 'tablet': '640px',

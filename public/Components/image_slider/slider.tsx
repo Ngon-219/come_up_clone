@@ -52,7 +52,7 @@ const Slider:React.FC<SlidesComponentProps> = ({slides}) => {
           </div>
         ))}
       </div>
-      <div className='absolute flex justify-center w-full bottom-1 flex-row'>
+      <div className='absolute flex justify-center w-full bottom-42vh flex-row'>
         <div className='border-none rounded-md pt-0 pb-0 pr-3 pl-3 text-center'>
           {Array.from(slides).map((elem, index) => (
               <p key={index} className= {
