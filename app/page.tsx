@@ -113,9 +113,7 @@ export default function Home() {
                     )
                   })}
                 </div>
-                <div className='w-full flex justify-center'>
-                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
-                    <button onClick={() => {
+                <div className='w-full flex justify-center'  onClick={() => {
                       setEventSeeMore(() => {
                         return venueImage.length > 6 ? (
                           (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
@@ -124,6 +122,8 @@ export default function Home() {
                         )
                       })
                     }}>
+                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
+                    <button>
                       {venueImage.length > 6 ? (
                       (event_see_more >= venueImage.length) ? "See less" : "See more"
                       ): (
@@ -166,9 +166,7 @@ export default function Home() {
                     })
                   }
                 </div>
-                <div className='w-full flex justify-center'>
-                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
-                    <button onClick={() => {
+                <div className='w-full flex justify-center'  onClick={() => {
                       setVenueSeeMore(() => {
                         return image.length > 6 ? (
                           (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
@@ -177,6 +175,8 @@ export default function Home() {
                         )
                       })
                     }}>
+                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
+                    <button>
                       {image.length > 6 ? (
                       (venue_see_more >= image.length) ? "See less" : "See more"
                       ): (
@@ -219,9 +219,7 @@ export default function Home() {
                 }
               </div>
 
-              <div className='w-full flex justify-center'>
-                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
-                    <button onClick={() => {
+              <div className='w-full flex justify-center' onClick={() => {
                       setHostSeeMore(() => {
                         return image.length > 6 ? (
                           (host_see_more >= image.length) ? (6) : (host_see_more + 3)
@@ -230,6 +228,8 @@ export default function Home() {
                         )
                       })
                     }}>
+                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
+                    <button >
                       {image.length > 6 ? (
                       (host_see_more >= image.length) ? "See less" : "See more"
                       ): (
