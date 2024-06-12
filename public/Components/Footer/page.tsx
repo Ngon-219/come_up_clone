@@ -8,7 +8,7 @@ import come_up_icon from './image/come_up_logo.png'
 const Footer = () => {
   return (
       <div>
-        <footer className='w-full p-8 flex justify-center'>
+        <footer className='p-8 flex justify-center w-fit'>
           <div>
             <div className='flex justify-center  text-2xl font-semibold p-4'>
               Enjoy ComeUp More Conveniently
@@ -25,7 +25,7 @@ const Footer = () => {
               <p>ComeUp does not guarantee any information provided by hosts and is not responsible for transations.</p>
             </div>
 
-            <div className='lg:block hidden m-2 relative text-left w-full text-gray-600'>
+            {/* <div className='lg:block hidden m-2 relative text-left w-full text-gray-600'>
               <table>
                 <tbody>
                   <tr>
@@ -43,6 +43,15 @@ const Footer = () => {
             </div>
 
             <div className='lg:hidden block m-2 relative text-left w-full text-gray-600'>
+              <p className=' pr-96 '>Introduce</p>
+              <p className='pr-96 '>Regulation and form of payment</p>
+              <p className=''>Exchange and refund policy</p>
+              <p className='pr-96 '>General policy and regulation</p>
+              <p className='pr-96 '>Shipping delivery policy</p>
+              <p className=''>Policy to protect consumer’s personal information</p>
+            </div> */}
+
+            <div className='grid laptop:grid-cols-3 grid-cols-1'>
               <p className=' pr-96 '>Introduce</p>
               <p className='pr-96 '>Regulation and form of payment</p>
               <p className=''>Exchange and refund policy</p>
