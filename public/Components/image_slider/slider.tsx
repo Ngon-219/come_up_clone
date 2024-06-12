@@ -32,13 +32,14 @@ const Slider:React.FC<SlidesComponentProps> = ({slides}) => {
   }, [activeImage])
 
   return (
-    <div className=' bg-slate-50 w-full h-40vh laptop:h-50vh'>
-      <div className='absolute left-0 h-40vh laptop:h-50vh flex items-center p-2'>
-        <Image src={prev_icon} alt="" className='h-8 w-8' onClick={clickPrev}/>
-      </div>
+    <div className='relative bg-slate-50 h-40vh laptop:h-50vh border-none m-0 p-0'>
       <div className='absolute right-0 h-40vh laptop:h-50vh flex items-center p-2'>
         <Image src={next_icon} alt="" className='h-8 w-8' onClick={clickNext}/>
       </div>
+      <div className='absolute left-0 h-40vh laptop:h-50vh flex items-center p-2'>
+        <Image src={prev_icon} alt="" className='h-8 w-8' onClick={clickPrev}/>
+      </div>
+      
       <div>
         {Array.from(slides).map((elem, index) => (
           <div
@@ -52,7 +53,7 @@ const Slider:React.FC<SlidesComponentProps> = ({slides}) => {
           </div>
         ))}
       </div>
-      <div className='absolute flex justify-center w-full bottom-42vh flex-row'>
+      <div className='absolute flex justify-center w-full bottom-2 flex-row'>
         <div className='border-none rounded-md pt-0 pb-0 pr-3 pl-3 text-center'>
           {Array.from(slides).map((elem, index) => (
               <p key={index} className= {
