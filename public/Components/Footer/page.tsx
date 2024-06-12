@@ -8,7 +8,7 @@ import come_up_icon from './image/come_up_logo.png'
 const Footer = () => {
   return (
       <div>
-        <footer className='p-8 flex justify-center w-fit'>
+        <footer className='p-8 flex justify-center w-full'>
           <div>
             <div className='flex justify-center  text-2xl font-semibold p-4'>
               Enjoy ComeUp More Conveniently
@@ -17,8 +17,8 @@ const Footer = () => {
               <Image src={Phone_footer} alt="phone_image" width={200}/>
             </div>
             <div className='flex flex-row p-2 justify-center'>
-              <Image src={app_store_icon} alt="phone_image" width={210} className='p-2'/>
-              <Image src={ch_play_button} alt="phone_image" width={210} className='p-2'/>
+              <Image src={app_store_icon} alt="phone_image" className='p-2 w-15vh'/>
+              <Image src={ch_play_button} alt="phone_image" className='p-2 w-15vh'/>
             </div>
             <div className='flex flex-col justify-center w-full  p-2 text-center text-gray-600'>
               <p>ComeUp is an online ticket trading platform, not an actual ticket seller.</p>
@@ -52,12 +52,12 @@ const Footer = () => {
             </div> */}
 
             <div className='grid laptop:grid-cols-3 grid-cols-1'>
-              <p className=' pr-96 '>Introduce</p>
-              <p className='pr-96 '>Regulation and form of payment</p>
-              <p className=''>Exchange and refund policy</p>
-              <p className='pr-96 '>General policy and regulation</p>
-              <p className='pr-96 '>Shipping delivery policy</p>
-              <p className=''>Policy to protect consumer’s personal information</p>
+              <p>Introduce</p>
+              <p>Regulation and form of payment</p>
+              <p>Exchange and refund policy</p>
+              <p>General policy and regulation</p>
+              <p>Shipping delivery policy</p>
+              <p>Policy to protect consumer’s personal information</p>
             </div>
             <div className='flex justify-center'>
               <Image src={come_up_icon} alt="" />

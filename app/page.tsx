@@ -20,6 +20,7 @@ import VenueComponent from '@/public/Components/VenueComponent/VenueComponent'
 import { useContext } from 'react'
 import SampleContext from '@/public/Context/SampleContext'
 import page from './user/page'
+import Head from 'next/head'
 
 
 export default function Home() {
@@ -57,6 +58,9 @@ export default function Home() {
   const venueImage = useContext(SampleContext)
   return (
     <div>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <NavBar />
       <Slider slides={image} />
       <div className='laptop:ml-32 laptop:mr-32 ml-8 mr-8'>

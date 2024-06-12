@@ -45,13 +45,13 @@ function NavBar() {
                 
             </div>
         </div>
-        <div className='p-4 laptop:p-8'>
+        <div className='p-1 sm:p-4 laptop:p-8 scale-50 sm:scale-100'>
           <Image src={notification_icon} alt="" width={40}/>
         </div>
-        <div className='p-4 laptop:p-8'>
+        <div className='p-1 sm:p-4 laptop:p-8 scale-50 sm:scale-100'>
           <Image src={search_icon} alt="" width={40}/>
         </div>
-        <div className='p-4 laptop:p-8'>
+        <div className='p-1 sm:p-4 laptop:p-8 scale-50 sm:scale-100'>
           <Image src={global_icon} alt="" width={40}/>
         </div>
         <div className='hidden p-4 laptop:p-8 laptop:flex flex-row pr-0'>
