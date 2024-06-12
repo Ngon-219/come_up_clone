@@ -113,7 +113,7 @@ export default function Home() {
                     )
                   })}
                 </div>
-                <div className='w-full flex justify-center'  onClick={() => {
+                <div className='w-full flex justify-center hover:cursor-pointer'  onClick={() => {
                       setEventSeeMore(() => {
                         return venueImage.length > 6 ? (
                           (event_see_more >= venueImage.length) ? (tg()) : (event_see_more + 3)
@@ -166,7 +166,7 @@ export default function Home() {
                     })
                   }
                 </div>
-                <div className='w-full flex justify-center'  onClick={() => {
+                <div className='w-full flex justify-center hover:cursor-pointer'  onClick={() => {
                       setVenueSeeMore(() => {
                         return image.length > 6 ? (
                           (venue_see_more >= image.length) ? (6) : (venue_see_more + 3)
@@ -228,7 +228,7 @@ export default function Home() {
                         )
                       })
                     }}>
-                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4'>
+                  <div className='laptop:w-40 w-full text-center m-2 border-2 p-4 hover:cursor-pointer'>
                     <button >
                       {image.length > 6 ? (
                       (host_see_more >= image.length) ? "See less" : "See more"
