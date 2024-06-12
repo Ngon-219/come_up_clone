@@ -13,10 +13,12 @@ function NavBar() {
   return (
     <main>
       <div>
-      <nav className="flex flex-row bg-nav-bar w-full text-center items-center">
-        <div className='inline-block hover:cursor-pointer' >
-            <a href="/"><Image src={navLogo} alt="" width={200}/></a>
-        </div>
+      <nav className="flex flex-row bg-nav-bar w-full text-center items-center h-10 laptop:h-fit">
+        {/* <div className='flex justify-start'> */}
+          <div className='inline-block hover:cursor-pointer w-24 sm:w-60 items-center' >
+              <a href="/"><Image src={navLogo} alt="" width={200}/></a>
+          </div>
+        {/* </div> */}
         <div className='laptop:flex flex-row hidden'>
           <div className='pl-8 text-white font-medium hover:cursor-pointer'>
             <a href="/event">EVENT</a>
