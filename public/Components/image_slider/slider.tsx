@@ -32,11 +32,11 @@ const Slider:React.FC<SlidesComponentProps> = ({slides}) => {
   }, [activeImage])
 
   return (
-    <div className=' relative bg-slate-500 w-full h-40vh border-none laptop:h-50vh top-0'>
-      <div className=' absolute left-0 h-40vh laptop:h-50vh flex items-center p-2'>
+    <div className='relative bg-slate-50 w-full h-40vh border-none laptop:h-50vh top-0'>
+      <div className='absolute left-0 h-40vh laptop:h-50vh flex items-center border-2 p-2'>
         <Image src={prev_icon} alt="" className='h-8 w-8' onClick={clickPrev}/>
       </div>
-      <div className=' absolute right-0 h-40vh laptop:h-50vh flex items-center p-2 laptop:p-6'>
+      <div className='absolute right-4 h-40vh laptop:h-50vh flex items-center border-2 p-2'>
         <Image src={next_icon} alt="" className='h-8 w-8' onClick={clickNext}/>
       </div>
       <div>
